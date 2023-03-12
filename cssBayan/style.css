@@ -186,8 +186,8 @@ img.icon_left {
   height: auto;
   width: 8%;
   float: right;
-  display: none;
-  padding: 10% 0 2% 0;
+  opacity: 0;
+  padding: 10% 0 10% 0;
 }
 
 .picture_len {
@@ -205,14 +205,14 @@ figure:hover {
   color: black;
 }
 #bayan:hover img.icon_left {
-  display: block;
+  opacity: 1;
 }
 div.icon:hover {
   cursor: pointer;
 }
 p {
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: 1.5gitrem;
   font-weight: bold;
 }
 
