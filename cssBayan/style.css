@@ -1,0 +1,246 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #d5eeec;
+  line-height: 1;
+  overflow-x: hidden;
+}
+*,
+body {
+  -webkit-text-size-adjust: none;
+}
+.wrap {
+  background-color: #d5eeec;
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 2rem;
+}
+h1 {
+  margin: 1rem 0 0 0;
+  text-align: left;
+  padding: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.wrap_section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.text {
+  flex: 3 1 60%;
+  border-top: solid black 0.25em;
+}
+.icon {
+  flex: 1 1 40%;
+  border-top: solid black 0.25rem;
+}
+figure {
+  flex: 1 1 100%;
+  margin: 0;
+  display: none;
+}
+#bayan input:checked ~ figure {
+  display: block;
+}
+#bayan input:checked ~ .text p {
+  color: black;
+}
+
+#bayan:hover p {
+  color: black;
+}
+#bayan:hover .wrap_section:hover figure {
+  display: block;
+}
+#bayan:hover .wrap_section:hover img.icon_left {
+  transform: rotate(45deg);
+  transition: 0.5ms ease;
+}
+input:checked ~ .icon > img {
+  transform: rotate(45deg);
+  transition: 0.5ms ease;
+}
+figure {
+  opacity: 0;
+  animation: ani 2.5s forwards;
+}
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+p {
+  color: blue;
+}
+
+img.icon_left {
+  height: auto;
+  width: 8%;
+  float: right;
+  opacity: 0;
+  padding: 10% 0 10% 0;
+}
+
+.picture_len {
+  height: auto;
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 0 1rem 0;
+}
+#bayan .wrap_section:hover,
+label:hover,
+figure:hover {
+  cursor: pointer;
+  color: black;
+}
+#bayan:hover img.icon_left {
+  opacity: 1;
+}
+div.icon:hover {
+  cursor: pointer;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5gitrem;
+  font-weight: bold;
+}
+
+@media (min-width: 100px) and (max-width: 320px) {
+  .wrap {
+    width: 90%;
+  }
+  text.p {
+    font-size: 10%;
+    font-weight: bold;
+  }
+  .picture_len {
+    height: auto;
+    width: 60%;
+  }
+}
+@media (min-width: 321px) and (max-width: 821px) {
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .wrap {
+    width: 70%;
+  }
+  .picture_len {
+    height: auto;
+    width: 70%;
+  }
+}
+
+/*mobile 320x568, tablet 820x1180, desktop 1920×1080;*/
