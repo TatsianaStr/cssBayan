@@ -125,38 +125,72 @@ h1 {
 }
 .wrap_section {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 .text {
-  flex: 3 1 3.25rem;
+  flex: 3 1 60%;
   border-top: solid black 2px;
 }
 .icon {
-  flex: 1 1 3.25rem;
+  flex: 1 1 40%;
   border-top: solid black 2px;
 }
-img.icon_left {
-  border: solid red 1px;
-  height: auto;
-  width: 10%;
-  float: right;
+figure {
+  flex: 1 1 100%;
+  margin: 0;
+  display: none;
 }
-img.icon_left:hover {
+#bayan input:checked ~ figure {
+  display: block;
+}
+#bayan input:checked ~ .text p {
+  color: black;
+}
+
+#bayan:hover p {
+  color: black;
+}
+#bayan:hover .wrap_section:hover figure {
+  display: block;
+  transition: all 0.5s;
+}
+input:checked ~ .icon > img {
   transform: rotate(45deg);
   transition: 0.5ms ease;
 }
-.picture {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+p {
+  color: blue;
+}
+
+img.icon_left {
+  border: solid red 1px;
+  height: auto;
+  width: 8%;
+  float: right;
+  display: none;
+  padding: 2% 0 2% 0;
 }
 
 .picture_len {
   height: auto;
-  width: 50%;
+  width: 40%;
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding: 1rem 0 1rem 0;
+}
+#bayan .wrap_section:hover,
+label:hover,
+figure:hover {
+  cursor: pointer;
+  color: black;
+}
+#bayan:hover img.icon_left {
+  display: block;
+}
+div.icon:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 320px) {
